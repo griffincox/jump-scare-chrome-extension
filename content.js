@@ -9,11 +9,9 @@ window.addEventListener("load", function() {
 });
 
 function triggerScare(sites) {
-  if (Math.random() < 0.5) {
+  if (sites.includes(window.location.hostname) && Math.random() < 0.5) {
     console.log("scare incoming!")
-    if (sites.includes(window.location.hostname)) {
-      setTimeout(jumpScare(), randomTime())
-    }
+    setTimeout(jumpScare(), randomTime())
   }
 }
 
