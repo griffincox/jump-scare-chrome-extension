@@ -1,15 +1,13 @@
 {
   "manifest_version": 2,
-
   "name": "Jump Scare",
   "version": "0.1.0",
-  "description": "Users can specify websites in which to randomly display a jump scare to remind them they don't want to be on that unproductive site.",
+  "description": "With this extension, users can specify websites in which to randomly display a jump scare image and sound to remind them they don't want to be on that, perhaps unproductive, site.",
   "icons": {
     "16": "images/scary-icon-16.png",
     "48": "images/scary-icon-48.png",
     "128": "images/scary-icon-128.png"
   },
-
   "content_scripts": [{
     "css": ["main/main.css"],
     "js": ["main/main.js"],
@@ -18,11 +16,9 @@
     "https://*/*"
     ]
   }],
-
   "permissions": [
     "storage"
   ],
-
   "options_ui": {
   "page": "options/options.html",
   "open_in_tab": false
