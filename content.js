@@ -9,8 +9,8 @@ window.addEventListener("load", function() {
 });
 
 function triggerScare(sites) {
-  console.log("scare incoming!")
   if (Math.random() < 0.5) {
+    console.log("scare incoming!")
     if (sites.includes(window.location.hostname)) {
       setTimeout(jumpScare(), randomTime())
     }
