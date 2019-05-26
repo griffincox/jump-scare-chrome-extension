@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Jump Scares",
+  "version": "0.1.0",
+  "description": "for productivity",
+
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["content.js"],
+    "matches": ["*://*.facebook.com/*"]
+  }],
+
+  "permissions": [
+    "storage"
+  ],
+
+  "options_ui": {
+  "page": "options.html",
+  "open_in_tab": false
+  }
+}
