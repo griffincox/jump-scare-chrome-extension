@@ -16,10 +16,14 @@ textarea#websites {
 #status {
   font-size: 1.25em;
   color: #26c107;
+  height: 1em;
+  display: inline-block;
 }
 
 button#save {
   font-size: 1.25em;
+  display: inline-block;
+  margin-right: 5px;
 }
 
 button#save:hover {
