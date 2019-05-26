@@ -21,7 +21,7 @@ function jumpScare() {
   audio = new Audio(chrome.runtime.getURL('sounds/tolling-bell_daniel-simion.mp3'));
   audio.play();
   imageNode = document.createElement("img");
-  imageNode.setAttribute('src', chrome.runtime.getURL('images/scary-picture-1.jpeg'));
+  imageNode.setAttribute('src', randomScaryImageUrl());
   imageNode.setAttribute('id', 'scary-image');
   documentBody.appendChild(imageNode);
 
@@ -36,4 +36,11 @@ function jumpScare() {
 
 function randomTime() {
   Math.random() *  10000
+}
+
+function randomScaryImageUrl() {
+  numberOfScaryPictures = 5
+  number = Math.floor(Math.random() * numberOfScaryPictures) + 1
+  fileString = 'images/scary-picture-' + number + '.jpeg'
+  return chrome.runtime.getURL(fileString)
 }
