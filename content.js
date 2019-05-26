@@ -21,7 +21,7 @@ function jumpScare() {
   audio = new Audio('http://soundbible.com/mp3/tolling-bell_daniel-simion.mp3');
   audio.play();
   imageNode = document.createElement("img");
-  imageNode.setAttribute('src', 'http://www.scaryforkids.com/pics/scary-pictures.jpg');
+  imageNode.setAttribute('src', chrome.runtime.getURL('images/scary-picture.jpg'));
   imageNode.setAttribute('id', 'scary-image');
   documentBody.appendChild(imageNode);
 
