@@ -1,6 +1,7 @@
 # TODO
-1. turn on probability
-2. allow users to specify sites (populate the options properly, await the promise, accept multiple sites, contains not ==)
+2. load extension on all pages...
 3. pull images from API (random images)
-4. get it to work on more than FB
-https://developers.chrome.com/extensions/storage
+5. clean up, publish
+-- description
+-- add icon
+-- dealing with 'www.' in inputs

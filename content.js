@@ -3,16 +3,14 @@ window.addEventListener("load", function() {
     // default
     websites: 'www.facebook.com'
   }, function(items) {
-    sites = items.websites;
-    console.log('sites is: ' + sites)
+    sites = items.websites.replace(/\s/g, '').split(',');
     trigger_scare(sites)
   });
 });
 
 function trigger_scare(sites) {
   if (Math.random() < 0.5) {
-  console.log("sites: " + sites)
-    if (window.location.hostname == sites) {
+    if (sites.includes(window.location.hostname)) {
       documentBody = document.body;
       audio = new Audio('http://soundbible.com/mp3/tolling-bell_daniel-simion.mp3');
       audio.play();

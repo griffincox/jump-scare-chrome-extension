@@ -8,7 +8,10 @@
   "content_scripts": [{
     "css": ["styles.css"],
     "js": ["content.js"],
-    "matches": ["*://*.facebook.com/*"]
+    "matches": [
+    "http://*/*",
+    "https://*/*"
+    ]
   }],
 
   "permissions": [

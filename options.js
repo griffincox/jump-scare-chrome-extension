@@ -10,9 +10,18 @@ function save_options() {
     setTimeout(function() {
       status.textContent = '';
     }, 750);
-    console.log("saved settings")
   });
 }
 
+// Restores select box and checkbox state using the preferences
+// stored in chrome.storage.
+function restore_options() {
+  chrome.storage.sync.get({
+    websites: 'www.faceobook.com'
+  }, function(items) {
+    document.getElementById('websites').value = items.websites;
+  });
+}
+document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click',
     save_options);
