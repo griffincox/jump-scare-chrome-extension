@@ -1,0 +1,27 @@
+#jump-scare-extension {
+  padding: 1em;
+}
+
+#jump-scare-input-label {
+  display: block;
+  font-weight: bold;
+}
+
+textarea#websites {
+  width: 95%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#status {
+  font-size: 1.25em;
+  color: #26c107;
+}
+
+button#save {
+  font-size: 1.25em;
+}
+
+button#save:hover {
+  cursor: pointer;
+}
