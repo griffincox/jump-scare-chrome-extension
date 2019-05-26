@@ -25,3 +25,11 @@ function restore_options() {
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click',
     save_options);
+
+    window.addEventListener('keydown', function(e) {
+      if ((e.key == 'Escape' || e.key == 'Esc' || e.keyCode == 27) && (e.target.nodeName == 'BODY')) {
+        document.querySelector('#scary-image').remove();
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    }, true);

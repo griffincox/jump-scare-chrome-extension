@@ -3,13 +3,13 @@ window.addEventListener("load", function() {
     // default
     websites: 'www.facebook.com'
   }, function(items) {
-    sites = items.websites.replace(/\s/g, '').split(',');
+    sites = items.websites.replace(/\s/g, '').replace('www.','').split(',');
     triggerScare(sites)
   });
 });
 
 function triggerScare(sites) {
-  if (sites.includes(window.location.hostname) && Math.random() < 0.5) {
+  if (sites.includes(location.host.replace('www.','')) && Math.random() < 0.5) {
     console.log("scare incoming!")
     setTimeout(jumpScare(), randomTime())
   }
