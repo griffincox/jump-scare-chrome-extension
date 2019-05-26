@@ -3,14 +3,14 @@ window.addEventListener("load", function() {
     // default
     websites: 'www.facebook.com'
   }, function(items) {
-    sites = items.websites.replace(/\s/g, '').replace('www.','').split(',');
+    sites = cleanStoredSitesString(items.websites).split(',');
     triggerScare(sites)
   });
 });
 
 function triggerScare(sites) {
   if (sites.includes(location.host.replace('www.','')) && Math.random() < 0.5) {
-    console.log("scare incoming!")
+    console.log("Scare incoming!")
     setTimeout(jumpScare(), randomTime())
   }
 }
@@ -32,6 +32,10 @@ function jumpScare() {
       audio.currentTime = 0;
     }
   }, true);
+}
+
+function cleanStoredSitesString(rawStoredSitesString) {
+  return rawStoredSitesString.replace(/\s/g, '').replace('www.','').replace('http://', '').replace('https://', '')
 }
 
 function randomTime() {
