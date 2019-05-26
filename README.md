@@ -2,7 +2,6 @@
 -- clean up, publish
 -- style options modal
 -- description
--- add icon
 -- dealing with 'www.' in inputs
 # Possible Improvements
 -- add more pictures
