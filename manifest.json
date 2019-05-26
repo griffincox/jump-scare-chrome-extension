@@ -3,7 +3,7 @@
 
   "name": "Jump Scares",
   "version": "0.1.0",
-  "description": "for productivity",
+  "description": "Users can specify websites in which to randomly display a jump scare to remind them they don't want to be on that unproductive site.",
 
   "content_scripts": [{
     "css": ["styles.css"],
