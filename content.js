@@ -9,6 +9,7 @@ window.addEventListener("load", function() {
 });
 
 function triggerScare(sites) {
+  console.log("scare incoming!")
   if (Math.random() < 0.5) {
     if (sites.includes(window.location.hostname)) {
       setTimeout(jumpScare(), randomTime())
@@ -18,10 +19,11 @@ function triggerScare(sites) {
 
 function jumpScare() {
   documentBody = document.body;
-  audio = new Audio('http://soundbible.com/mp3/tolling-bell_daniel-simion.mp3');
+  // Copyright Daniel Simion, used under Attribution 3.0
+  audio = new Audio(chrome.runtime.getURL('sounds/tolling-bell_daniel-simion.mp3'));
   audio.play();
   imageNode = document.createElement("img");
-  imageNode.setAttribute('src', chrome.runtime.getURL('images/scary-picture.jpg'));
+  imageNode.setAttribute('src', chrome.runtime.getURL('images/scary-picture-1.jpeg'));
   imageNode.setAttribute('id', 'scary-image');
   documentBody.appendChild(imageNode);
 
